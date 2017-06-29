@@ -17,10 +17,11 @@ export type Props = {
   children: Children,
   style: Object,
   src?: Source,
-  size?: SizingProps
+  size?: SizingProps,
+  keywords?: string | Array<string>
 }
 
-export default ({ children, src, size, style }: Props): Element<any> => {
+export default ({ children, src, size, keywords, style }: Props): Element<any> => {
   const { unsplashedContainerStyle } = styles
 
   let sourceUrl: string = '//source.unsplash.com'
@@ -43,6 +44,14 @@ export default ({ children, src, size, style }: Props): Element<any> => {
   if (size) {
     const { width, height } = size
     sourceUrl = `${sourceUrl}/${width}x${height}`
+  }
+
+  if (keywords) {
+    if (typeof keywords === 'string') {
+      sourceUrl = `${sourceUrl}/?${keywords}`
+    } else if (Array.isArray(keywords)) {
+      sourceUrl = `${sourceUrl}/?${keywords.join(',')}`
+    }
   }
 
   return (

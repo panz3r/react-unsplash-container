@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean, number, array } from '@storybook/addon-knobs'
 
 import UnsplashedContainer from './unsplashed'
 
@@ -49,6 +49,15 @@ stories.add(
   'with custom dimensions',
   () => (
     <UnsplashedContainer size={{ width: number('width', 1600), height: number('height', 900) }} style={{ height: number('height', 900) }}>
+      <br />
+    </UnsplashedContainer>
+  )
+)
+
+stories.add(
+  'with keywords',
+  () => (
+    <UnsplashedContainer keywords={array('keywords', ['nature', 'water'])} style={{ height: 500 }}>
       <br />
     </UnsplashedContainer>
   )
