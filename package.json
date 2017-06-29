@@ -1,0 +1,45 @@
+{
+  "name": "react-unsplash-container",
+  "version": "0.0.1",
+  "description": "A simple container with background images taken from unsplash.com",
+  "author": {
+    "name": "Mattia Panzeri",
+    "email": "mattia.panzeri93@gmail.com",
+    "url": "https://github.com/panz3r"
+  },
+  "license": "MPL-2.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "lint": "standard src/",
+    "typecheck": "flow check src/",
+    "validate": "run-s lint typecheck",
+    "storybook:start": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o .out",
+    "build:js": "babel src/ -d dist/",
+    "build:flow": "flow-copy-source -v -i '**/*.{story,spec}.js' src/ dist/",
+    "prebuild": "npm run clean",
+    "build": "run-s build:*"
+  },
+  "devDependencies": {
+    "@storybook/addon-info": "^3.1.6",
+    "@storybook/addon-knobs": "^3.1.6",
+    "@storybook/react": "^3.1.6",
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "flow-bin": "^0.48.0",
+    "flow-copy-source": "^1.1.0",
+    "npm-run-all": "^4.0.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "rimraf": "^2.6.1",
+    "standard": "*"
+  },
+  "peerDependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
