@@ -1,6 +1,6 @@
 {
   "name": "react-unsplash-container",
-  "version": "0.0.1-alpha.2",
+  "version": "1.0.0",
   "description": "A simple container with background images taken from unsplash.com",
   "keywords": [
     "react",
