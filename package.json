@@ -2,13 +2,26 @@
   "name": "react-unsplash-container",
   "version": "0.0.1-alpha.1",
   "description": "A simple container with background images taken from unsplash.com",
+  "keywords": [
+    "react",
+    "reactjs",
+    "unsplash",
+    "unsplash.com"
+  ],
   "author": {
     "name": "Mattia Panzeri",
     "email": "mattia.panzeri93@gmail.com",
     "url": "https://github.com/panz3r"
   },
   "license": "MIT",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panz3r/react-unsplash-container"
+  },
+  "bugs": {
+    "url": "https://github.com/panz3r/react-unsplash-container/issues"
+  },
+  "homepage": "https://github.com/panz3r/react-unsplash-container#readme",
   "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist/",
