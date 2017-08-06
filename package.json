@@ -1,13 +1,13 @@
 {
   "name": "react-unsplash-container",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.1",
   "description": "A simple container with background images taken from unsplash.com",
   "author": {
     "name": "Mattia Panzeri",
     "email": "mattia.panzeri93@gmail.com",
     "url": "https://github.com/panz3r"
   },
-  "license": "MPL-2.0",
+  "license": "MIT",
   "private": true,
   "main": "dist/index.js",
   "scripts": {
@@ -20,7 +20,8 @@
     "build:js": "babel src/ -d dist/",
     "build:flow": "flow-copy-source -v -i '**/*.{story,spec}.js' src/ dist/",
     "prebuild": "npm run clean",
-    "build": "run-s build:*"
+    "build": "run-s build:*",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@storybook/addon-info": "^3.1.6",
