@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, boolean, number, array, select } from '@storybook/addon-knobs'
+import { withKnobs, text, number, array, select } from '@storybook/addon-knobs'
 
 import UnsplashedContainer from './unsplashed'
 
